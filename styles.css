@@ -189,6 +189,26 @@ body {
   .intro-left {
     max-width: 50%;
   }
+
+  /* Illustration Styling */
+.intro-right {
+  width: 30%;
+  text-align: center;
+}
+
+.intro-right img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 0 0 15px rgba(42, 158, 38, 0.4); /* Subtle glow around the illustration */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Illustration Hover Effect */
+.intro-right img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(94, 76, 197, 0.6);
+}
   
   .intro-title {
     font-size: 2rem;
