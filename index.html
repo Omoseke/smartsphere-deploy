@@ -1,133 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>SMARTSPHERE</title>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar - SmartSphere</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #f5f5f5;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #6a4fd4; /* Purple shade */
+            text-transform: uppercase;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links li {
+            margin: 0 15px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover {
+            color: #6a4fd4; /* Purple shade */
+        }
+        .auth-buttons {
+            display: flex;
+        }
+        .auth-buttons a {
+            text-decoration: none;
+            margin-left: 15px;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 16px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .login {
+            color: #6a4fd4;
+            border: 1px solid #6a4fd4;
+            background-color: transparent;
+        }
+        .login:hover {
+            background-color: #6a4fd4;
+            color: #fff;
+        }
+        .signup {
+            color: #fff;
+            background-color: #6a4fd4;
+            border: none;
+        }
+        .signup:hover {
+            background-color: #573cb7; /* Darker purple */
+        }
+    </style>
 </head>
 <body>
-  <header class="navbar">
-    <div class="navbar-container">
-      <div class="logo">SMARTSPHERE</div>
-      <div class="search-container">
-        <input type="text" class="search-bar" placeholder="Search...">
-        <button class="search-btn">
-          <span class="material-icons">search</span>
-        </button>
-      </div>      
-      <div class="action-buttons">
-        <div class="merged-buttons">
-          <button class="login-btn">Log in</button>
-          <button class="signup-btn">Sign up</button>
+    <nav>
+        <div class="logo">SmartSphere</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <a href="#" class="login">Log In</a>
+            <a href="#" class="signup">Sign Up</a>
         </div>
-      </div>            
-    </div>
-  </header>
-
-  <main class="main-content">
-    <!-- Introduction Section -->
-    <section class="intro-section">
-      <div class="intro-left">
-        <h2 class="intro-title">
-          What is <span class="highlight">SMARTSPHERE?</span>
-        </h2>        
-        <p class="intro-description">
-          SMARTSPHERE <span class="highlight">is an advanced inventory tracking software</span> engineered to optimize inventory management and drive business growth.
-        </p>        
-      </div>
-      <div class="intro-right">
-        <img src="illustration.png" alt="SMARTSPHERE Illustration" class="intro-image">
-      </div>
-    </section>
-
-    <section class="intro-section">
-    <div class="intro-left">
-    <div class="intro-buttons">
-      <a href="#" class="access-button">ACCESS SMARTSPHERE →</a>
-    </div>
-    </section>
-
-    <section class="intro-section">
-      <div class="intro-left">
-      <div class="intro-buttons">
-        <a href="#" class="demo-button">SCHEDULE DEMO</a>
-    </div>
-    </section>
-
-<!-- Features Section -->
-<section class="features-section">
-  <!-- First Feature Card -->
-  <div class="feature-card">
-    <div class="feature-text">
-      <h3>SMARTSPHERE</h3>
-      <p class="intro-description">
-        SMARTSPHERE the best <span class="highlight">inventory manager.</span></p>      
-      <p>
-        <h6>Click here to learn more about SMARTSPHERE</h6>
-      </p>
-        <a href="#" class="card-link">Learn more</a>
-    </div>
-    <div class="feature-illustration">
-      <img src="illustration1.png" alt="Inventory Manager Illustration">
-    </div>
-  </div>
-
-  <!-- Second Feature Card -->
-  <div class="feature-card">
-    <div class="feature-text">
-      <h3>SMARTSPHERE</h3>
-      <p class="intro-description">
-        <span class="highlight">Smart inventory</span> web design just for you!!</p>      
-      <p>
-        <h6>Click here to get yours now</h6>
-      </p>
-      <a href="#" class="card-link">Get now</a>
-    </div>
-    <div class="feature-illustration">
-      <img src="illustration2.png" alt="Web Design Illustration">
-    </div>
-  </div>
-</section>
-
-<!-- Centered Third Feature Card -->
-<section>
-  <div class="feature-card">
-    <div class="feature-text">
-    <h3>SMARTSPHERE</h3>
-    <p class="intro-description">
-      <span class="highlight">SMARTSPHERE online courses</span> help you develop your marketing skills in a new and unique way</span></p>      
-    <p>
-      <h6>Click here to learn more about SMARTSPHERE online classes</h6>
-    </p>
-    <a href="#" class="card-link">Click here</a>
-  </div>
-  <div class="feature-illustration">
-    <img src="illustration3.png" alt="Online Courses">
-  </div>
-</section>
-
-<!-- Features List -->
-    <section class="features-list">
-      <h3>Features</h3>
-      <ul>
-        <li>Sales Order</li>
-        <li>Inventory</li>
-        <li>Order Performance</li>
-        <li>Purchase Order</li>
-      </ul>
-    </section>
-    <section class="features-list">
-      <h3>Features</h3>
-      <ul>
-        <li>Inventory</li>
-        <li>Inventory</li>
-        <li>Sales Tracking</li>
-        <li>Barcode generator and scanning</li>
-      </ul>
-    </section>
-  </main>
+    </nav>
 </body>
 </html>
