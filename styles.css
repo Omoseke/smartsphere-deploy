@@ -1,578 +1,78 @@
-/* General Body Styles */
+/* General Styles */
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    background-color: #f8f8f8;
-  }
-
-/* Navbar Styling */
-.navbar {
-  background: linear-gradient(135deg, #201944, #5e4cc5);
-  padding: 1rem 2rem;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-  position: relative;
-  z-index: 10;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-.navbar-container {
+/* Navbar Styles */
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 15px 30px;
+  background-color: #f5f5f5;
 }
-  
-/* Logo Styling */
+
 .logo {
-  font-size: 1.8rem;
+  font-size: 24px;
   font-weight: bold;
-  color: #ffffff;
-  text-shadow: 0 4px 8px rgba(247, 77, 10, 0.8);
-  transition: transform 0.3s ease, text-shadow 0.3s ease;
-}
-
-.logo:hover {
-  transform: scale(1.1);
-  text-shadow: 0 6px 12px rgb(116, 7, 52);
-}
- 
-  .search-container {
-    display: flex;
-    align-items: center;
-    width: 55%;
-    background: linear-gradient(135deg, #ffffff, #e5e5e5);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .search-container:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-  }
-  
-  .search-bar {
-    flex-grow: 1;
-    padding: 0.5rem;
-    border: none;
-    color: #333;
-    font-size: 1rem;
-    background: transparent;
-    outline: none;
-    transition: color 0.3s ease;
-  }
-  
-  .search-bar::placeholder {
-    color: #999;
-    font-style: italic;
-    transition: color 0.3s ease;
-  }
-  
-  .search-bar:focus::placeholder {
-    color: transparent;
-  }
-  
-  .search-btn {
-    background: linear-gradient(135deg, #3c309e, #5e4cc5, #00c6ff);
-    border: none;
-    border-radius: 0 12px 12px 0;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-  }
-  
-  .search-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 0 0 10px rgba(94, 76, 197, 0.8);
-  }
-  
-  .search-btn::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    background: linear-gradient(270deg, rgba(94, 76, 197, 0.3), rgba(0, 198, 255, 0.3), rgba(159, 134, 255, 0.3));
-    filter: blur(8px);
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  .search-btn:hover::after {
-    opacity: 1;
-  }
-  
-  .search-btn img,
-  .search-btn i {
-    width: 20px;
-    height: 20px;
-    color: white;
-    transition: transform 0.3s ease;
-  }
-  
-  .search-btn:hover img,
-  .search-btn:hover i {
-    transform: scale(1.1);
-  }  
-  
-/* General styling for the merged buttons container */
-.action-buttons {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-.merged-buttons {
-  display: flex;
-  border-radius: 12px;
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(270deg, #5e4cc5, #00c6ff, #9f86ff, #5e4cc5);
-  background-size: 400% 400%;
-  animation: gradient-animation 6s linear infinite;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Gradient animation */
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Styling individual buttons */
-.merged-buttons button {
-  flex: 1;
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 0.7rem;
-  font-weight: bold;
-  padding: 0.50rem 2.5rem;
+  color: #6a4fd4; /* Purple color */
   text-transform: uppercase;
-  cursor: pointer;
-  position: relative;
-  z-index: 1;
-  transition: all 0.3s ease;
 }
 
-/* Add hover effect for buttons */
-.merged-buttons button:hover {
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.4);
-}
-
-/* Add divider effect between buttons */
-.merged-buttons button:not(:last-child) {
-  border-right: 1px solid rgba(255, 255, 255, 0.5);
-}
-  
-/* Introduction Section */
-  .intro-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem;
-    background-color: rgb(255, 255, 255);
-  }
-  
-  .intro-left {
-    max-width: 50%;
-  }
-
-  /* Illustration Styling */
-.intro-right {
-  width: 30%;
-  text-align: center;
-}
-
-.intro-right img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 0 0 15px rgba(42, 158, 38, 0.4); /* Subtle glow around the illustration */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Illustration Hover Effect */
-.intro-right img:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(94, 76, 197, 0.6);
-}
-  
-  .intro-title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: black; /* Default color for "What is" */
-  }
-  
-  .intro-title .highlight {
-    color: #5e4cc5; /* Purple color for "SMARTSPHERE?" */
-  }  
-  
-  .intro-description {
-    font-size: 1rem;
-    color: #333; /* Default text color */
-    line-height: 1.6;
-  }
-  
-  .intro-description .highlight {
-    color: #5e4cc5; /* Purple color for the highlighted phrase */
-    font-weight: bold;
-  }  
-  
-  .intro-buttons a {
-    text-decoration: none;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
-    font-weight: bold;
-    margin-right: 1rem;
-  }
-  
-/* Access Button */
-.access-button {
-  background-color: #5e4cc5;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 12px;
-  font-size: 1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgb(10, 10, 10), 0 0 15px rgba(94, 76, 197, 0.5); /* Glow effect */
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-}
-
-/* Water Droplet Animation for Access Button */
-.access-button::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 300%;
-  height: 300%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 20%, transparent 60%);
-  opacity: 0;
-  transform: scale(0);
-  transition: transform 1s ease, opacity 1s ease;
-}
-
-.access-button:hover::before {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.access-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 15px rgba(94, 76, 197, 0.6), 0 0 20px rgba(94, 76, 197, 0.8);
-  background: linear-gradient(135deg, #5e4cc5, #7c5ede);
-}
-
-/* Demo Button */
-.demo-button {
-  background-color: #449186;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 12px;
-  font-size: 1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgb(14, 13, 13), 0 0 15px rgba(68, 145, 134, 0.5); /* Glow effect */
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-}
-
-/* Water Droplet Animation for Demo Button */
-.demo-button::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 300%;
-  height: 300%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 20%, transparent 60%);
-  opacity: 0;
-  transform: scale(0);
-  transition: transform 1s ease, opacity 1s ease;
-}
-
-.demo-button:hover::before {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.demo-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 15px rgba(68, 145, 134, 0.6), 0 0 20px rgba(68, 145, 134, 0.8);
-  background: linear-gradient(135deg, #449186, #5cc29d);
-}
-  
-  .intro-right {
-    max-width: 45%;
-  }
-  
-  .intro-image {
-    width: 100%;
-  }
-  
-/* Features Section */
-.features-section {
-  display: flex; /* Change from column to row */
-  flex-direction: row; /* Cards aligned side by side */
-  justify-content: space-between; /* Ensure equal spacing between cards */
-  gap: 2rem; /* Maintain gap between cards */
-  padding: 2rem;
-  background-color: #f8f8f8;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
-}
-
-/* Feature Card Layout */
-.feature-card {
+.nav-links {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  padding: 1.5rem; /* Increased padding for better spacing */
-  border: 1px solid transparent; /* Transparent border for smooth hover transition */
-  border-radius: 12px;
-  background: linear-gradient(135deg, rgba(42, 158, 38, 0.8), rgba(94, 76, 197, 0.6));
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
-  width: 48%; /* Ensure cards fit side by side within the section */
-  box-sizing: border-box; /* Include padding and border in width */
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* 3D Hover Effect and Glow */
-.feature-card:hover {
-  transform: translateY(-5px); /* Lift card on hover */
-  box-shadow: 0 12px 20px rgba(94, 76, 197, 0.5), 0 0 15px rgba(42, 158, 38, 0.6);
-  border: 1px solid rgba(94, 76, 197, 0.8);
-  background: linear-gradient(135deg, rgba(42, 158, 38, 0.9), rgba(94, 76, 197, 0.8));
+.nav-links li {
+  margin: 0 15px;
 }
 
-/* Text Styling */
-.feature-text {
-  width: 50%;
-  text-align: left;
-  color: white; /* Enhanced contrast for futuristic look */
-}
-
-.feature-text h3 {
-  font-size: 1.5rem;
-  color: rgba(94, 76, 197, 1); /* Vibrant purple color */
-  margin-bottom: 0.5rem;
-  text-shadow: 0 4px 8px rgba(94, 76, 197, 0.8); /* Text glow effect */
-}
-
-.feature-text p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  color: rgba(255, 255, 255, 0.9); /* Softer white for better readability */
-}
-
-.feature-text .card-link {
+.nav-links a {
   text-decoration: none;
-  color: white;
-  background: linear-gradient(135deg, rgba(94, 76, 197, 1), rgba(42, 158, 38, 1));
-  padding: 0.5rem 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  color: #333;
+  font-size: 16px;
+  transition: color 0.3s ease;
 }
 
-.feature-text .card-link:hover {
-  background: linear-gradient(135deg, rgba(42, 158, 38, 1), rgba(94, 76, 197, 1));
-  transform: scale(1.05); /* Slight scaling on hover */
-  box-shadow: 0 8px 15px rgba(94, 76, 197, 0.5), 0 0 10px rgba(42, 158, 38, 0.8);
+.nav-links a:hover {
+  color: #6a4fd4; /* Purple shade */
 }
 
-/* Illustration Styling */
-.feature-illustration {
-  width: 50%;
-  text-align: center;
-}
-
-.feature-illustration img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 0 0 15px rgba(42, 158, 38, 0.4); /* Subtle glow around the illustration */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Illustration Hover Effect */
-.feature-illustration img:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(94, 76, 197, 0.6);
-}
-
-/* Centered Section for Third Card */
-section {
-  display: flex; /* Use Flexbox */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically if needed */
-  padding: 2rem; /* Add spacing around the card */
-}
-
-section .feature-card {
+/* Authentication Buttons */
+.auth-buttons {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  padding: 1.5rem; /* Match padding with the other cards */
-  border: 1px solid transparent;
-  border-radius: 12px;
-  background: linear-gradient(135deg, rgba(42, 158, 38, 0.8), rgba(94, 76, 197, 0.6));
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-  width: 48%; /* Match the width of the first and second cards */
-  max-width: 600px; /* Optional: Limit maximum size */
-  box-sizing: border-box;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
 }
 
-section .feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 20px rgba(94, 76, 197, 0.5), 0 0 15px rgba(42, 158, 38, 0.6);
-  border: 1px solid rgba(94, 76, 197, 0.8);
-}
-  
-/* Features List Section */
-  .features-list {
-    text-align: center;
-    padding: 2rem;
-    background-color: #5e4cc5;
-    color: white;
-  }
-  
-  .features-list h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .features-list ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .features-list li {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
-
-/* Responsive Design */
-
-/* Extra Small Devices (up to 576px) */
-@media (max-width: 576px) {
-  .navbar-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .search-container {
-    width: 100%;
-    margin-top: 1rem;
-  }
-
-  .intro-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .intro-left, .intro-right {
-    max-width: 100%;
-  }
-
-  .intro-right img {
-    max-width: 90%;
-    margin: 0 auto;
-  }
-
-  .features-section {
-    flex-direction: column;
-  }
-
-  .feature-card {
-    flex-direction: column;
-    text-align: center;
-  }
+.auth-buttons a {
+  text-decoration: none;
+  margin-left: 15px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Small Devices (up to 768px) */
-@media (max-width: 768px) {
-  .navbar-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .search-container {
-    width: 80%;
-  }
-
-  .intro-section {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .features-section {
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
-  .feature-card {
-    flex-direction: column;
-    gap: 1rem;
-  }
+.login {
+  color: #6a4fd4;
+  border: 1px solid #6a4fd4;
+  background-color: transparent;
 }
 
-/* Medium Devices (up to 992px) */
-@media (max-width: 992px) {
-  .navbar-container {
-    flex-wrap: nowrap;
-    gap: 0.5rem;
-  }
-
-  .search-container {
-    width: 60%;
-  }
-
-  .intro-left, .intro-right {
-    max-width: 48%;
-  }
-
-  .features-section {
-    flex-wrap: wrap;
-    gap: 1.5rem;
-  }
+.login:hover {
+  background-color: #6a4fd4;
+  color: #fff;
 }
 
-/* Large Devices (up to 1200px) */
-@media (max-width: 1200px) {
-  .intro-section {
-    gap: 2rem;
-  }
+.signup {
+  color: #fff;
+  background-color: #6a4fd4;
+  border: none;
+}
 
-  .intro-left, .intro-right {
-    max-width: 45%;
-  }
-
-  .features-section {
-    gap: 2rem;
-  }
+.signup:hover {
+  background-color: #573cb7; /* Darker purple */
 }
