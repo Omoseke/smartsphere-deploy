@@ -88,3 +88,26 @@ window.addEventListener("scroll", () => {
         backToTop.style.display = "none";
     }
 });
+
+
+
+
+document.getElementById("hamburger-menu").addEventListener("click", function() {
+    this.classList.toggle("open"); // Toggle hamburger icon animation
+    const navLinks = document.getElementById("nav-links");
+    const mobileNav = document.getElementById("mobile-nav");
+
+    // Toggle the visibility of the navigation links
+    if (navLinks.classList.contains("show")) {
+        navLinks.classList.remove("show");
+    } else {
+        navLinks.classList.add("show");
+    }
+
+    // Show mobile nav on smaller screens
+    if (mobileNav.classList.contains("show-nav")) {
+        mobileNav.classList.remove("show-nav");
+    } else {
+        mobileNav.classList.add("show-nav");
+    }
+});
