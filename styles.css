@@ -382,7 +382,7 @@ nav {
 
 /* Logo Styling */
 .brand-logo {
-  max-width: 120px;
+  max-width: 100px;
   opacity: 0.85;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
