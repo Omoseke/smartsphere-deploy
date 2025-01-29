@@ -1,8 +1,27 @@
 /* General Styles */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, 'Poppins', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     overflow-x: hidden;
+    color: #E9CCFF;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
 }
 
 nav {
@@ -10,7 +29,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background-color: #e9ccff;
+    background-color: #E9CCFF;
 }
 
 /* Animation Effects for the Logo */
@@ -265,7 +284,7 @@ nav {
 .hero {
   padding: 120px 0;
   text-align: center;
-  background-color: #e8e3fd;
+  background-color: #E9CCFF;
 }
 
 .hero-content {
@@ -281,7 +300,7 @@ nav {
 
 .hero-text h2 {
   font-size: 2.5rem;
-  color: #333;
+  color: #6B5ACD;
 }
 
 .hero-text p {
@@ -297,7 +316,7 @@ nav {
 .btn {
   text-decoration: none;
   padding: 12px 20px;
-  border-radius: 25px;
+  border-radius: 9px;
   font-weight: bold;
   display: inline-block;
 }
@@ -323,7 +342,190 @@ nav {
 }
 
 /* Trusted Section */
-.trusted {
-  padding: 50px 0;
-  text-align: center;
+.trusted-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  background: #f4eefe; /* Light purple background */
 }
+
+/* Curved Rectangle HUD */
+.trusted-box {
+  background: white;
+  padding: 30px 50px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 20px rgba(245, 3, 3, 0.1);
+  text-align: center;
+  width: 80%;
+  max-width: 1000px;
+  height: 141px;
+  padding-top: 24px;
+  margin-top: -135px;  /* Adjust this value to push it higher or lower */
+}
+
+/* Title Styling */
+.trusted-box h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Logo Container */
+.logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Logo Styling */
+.brand-logo {
+  max-width: 120px;
+  opacity: 0.85;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.brand-logo:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .trusted-box {
+      width: 95%;
+      padding: 20px;
+  }
+
+  .logos {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+  }
+
+  .brand-logo {
+      max-width: 90px;
+  }
+}
+
+/* Services Section */
+.services {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 0;
+}
+
+.services-content {
+  max-width: 50%;
+}
+
+.services h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #5B3E96;
+}
+
+.services p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero, .services {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .hero-content, .services-content {
+      max-width: 100%;
+  }
+
+  .hero-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .trusted .brands {
+      flex-wrap: wrap;
+  }
+}
+
+/* Trusted By Section */
+.trusted {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.brands {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.brands img {
+  height: 30px;
+}
+
+/* Services Section */
+.services {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 0;
+}
+
+.services-content {
+  max-width: 50%;
+}
+
+.services h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #5B3E96;
+}
+
+.services p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero, .services {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .hero-content, .services-content {
+      max-width: 100%;
+  }
+
+  .hero-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .trusted .brands {
+      flex-wrap: wrap;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

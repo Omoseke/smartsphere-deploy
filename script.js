@@ -1,6 +1,8 @@
   // Mobile menu toggle
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('nav-links');
+  // Selecting elements
+  const hamburger = document.querySelector(".hamburger");
+  const mobileNav = document.querySelector(".mobile-nav");
+  const navLinks = document.querySelectorAll(".mobile-nav a");  
 
 hamburger.addEventListener('click', () => {
 navLinks.classList.toggle('show');
