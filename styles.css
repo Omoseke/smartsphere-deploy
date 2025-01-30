@@ -705,6 +705,24 @@ footer {
   margin-top: 30px;
 }
 
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #6c4acb;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    transition: 0.3s;
+}
+
+.back-to-top:hover {
+    background: #5533a1;
+}
 
 
 
