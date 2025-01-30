@@ -611,7 +611,10 @@ nav {
   }
 
   .mobile-nav a {
-      font-size: @media screen and (max-width: 768px) {
+      font-size: 1rem;
+}
+}
+@media screen and (max-width: 768px) {
     .hero-image img {
         max-width: 90%; /* Adjust to fit within mobile view */
         height: auto;
