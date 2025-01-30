@@ -611,8 +611,49 @@ nav {
   }
 
   .mobile-nav a {
-      font-size: 1rem;
-  }
+      font-size: @media screen and (max-width: 768px) {
+    .hero-image img {
+        max-width: 90%; /* Adjust to fit within mobile view */
+        height: auto;
+    }
+
+    .brand-logo {
+        max-width: 80px; /* Reduce logo size */
+    }
+
+    .trusted-box {
+        width: 95%;
+        padding: 15px;
+        text-align: center;
+    }
+}
+
+/* Mobile Menu Enhancements */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        text-align: center;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        cursor: pointer;
+    }
 }
 
 /* Footer */
