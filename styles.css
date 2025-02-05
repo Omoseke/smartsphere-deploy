@@ -896,7 +896,7 @@ button:hover {
   max-width: 1300px;
   height: 250px;
   margin-top: -100px;
-  z-index: 1000;
+  z-index: 3000;
 }
 
 /* Title Styling */
