@@ -1585,18 +1585,17 @@ button:hover {
 
 /* Pagination */
 .swiper-pagination {
-  position: fixed;
-  bottom: 20px;
+  position: absolute; /* Change from fixed to absolute */
+  bottom: -30px; /* Adjust to place it right beneath the feature cards */
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   gap: 10px;
   z-index: 1000;
-  -webkit-user-select: none;
   user-select: none;
   pointer-events: auto;
   justify-content: center;
-  width: auto;
+  width: 100%;
 }
 
 .swiper-pagination-bullet {
@@ -1682,7 +1681,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
   perspective: 1000px;
   transform-style: preserve-3d;
   box-shadow: 0px 0px 20px rgba(142, 45, 226, 0.4), 0px 0px 35px rgba(74, 0, 224, 0.6), inset 0px 0px 10px rgba(255, 255, 255, 0.2);
@@ -1691,9 +1690,10 @@ button:hover {
 
 .feature-card:hover {
   transform: scale(1.05) rotateX(5deg) rotateY(5deg);
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(106, 13, 173, 0.8);
   box-shadow: 0px 0px 30px rgba(142, 45, 226, 0.8), 0px 0px 50px rgba(74, 0, 224, 0.7), inset 0px 0px 15px rgba(255, 255, 255, 0.3);
   border: 2px solid rgba(255, 255, 255, 0.5);
+  color: white;
 }
 
 .feature-card::before {
@@ -1718,50 +1718,10 @@ button:hover {
   }
 }
 
-@keyframes floatAnimation {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-.feature-card:hover::before {
-  animation: floatAnimation 1s infinite ease-in-out;
-}
-
-.feature-card {
-  background: rgba(255, 255, 255, 0.1); /* Default card color */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.feature-card:hover {
-  transform: scale(1.05) rotateX(5deg) rotateY(5deg);
-  background: rgba(106, 13, 173, 0.8); /* Purple on hover */
-  box-shadow: 0px 0px 30px rgba(142, 45, 226, 0.8), 0px 0px 50px rgba(74, 0, 224, 0.7), inset 0px 0px 15px rgba(255, 255, 255, 0.3);
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  color: white; /* Ensures text is visible */
-}
-
-/* Ensure text and button colors adjust on hover */
-.feature-card:hover h3,
-.feature-card:hover ul {
-  color: white;
-}
-
-.feature-card:hover .btn {
-  background: white;
-  color: #6a5acd;
-}
-
 /* Touch support */
 @media (hover: none) {
   .feature-card:active {
-    background: rgba(106, 13, 173, 0.8); /* Purple on touch */
+    background: rgba(106, 13, 173, 0.8);
   }
 }
 
@@ -1829,68 +1789,19 @@ button:hover {
   box-shadow: 0 4px 15px rgba(106, 79, 212, 0.5);
   text-transform: uppercase;
   letter-spacing: 1px;
+  animation: floating 3s ease-in-out infinite;
 }
 
-/* Futuristic 3D Hover Effect */
-.feature-card .btn:hover {
-  transform: scale(1.1) translateZ(10px);
-  box-shadow: 0px 8px 25px rgba(106, 79, 212, 0.9);
-}
-
-/* Neon Glow Effect */
-.feature-card .btn::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.4), rgba(106, 79, 212, 0.5));
-  mix-blend-mode: overlay;
-  opacity: 0;
-  transition: opacity 0.4s ease-in-out;
-}
-
-.feature-card .btn:hover::before {
-  opacity: 1;
-}
-
-/* Sci-Fi Glowing Borders */
-.feature-card .btn::after {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  border-radius: 8px;
-  border: 2px solid transparent;
-  background: linear-gradient(90deg, rgba(106, 79, 212, 0.7), rgba(87, 60, 183, 0.7)) border-box;
-  mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
-  mask-composite: exclude;
-  animation: borderGlow 2s linear infinite alternate;
-  z-index: -1;
-}
-
-@keyframes borderGlow {
-  0% {
-    border-color: rgba(106, 79, 212, 0.6);
-    box-shadow: 0px 5px 25px rgba(106, 79, 212, 0.4);
-  }
-  100% {
-    border-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0px 15px 50px rgba(106, 79, 212, 0.8);
-  }
-}
-
-/* Floating Animation */
 @keyframes floating {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-5px); }
   100% { transform: translateY(0px); }
 }
 
-.feature-card .btn {
-  animation: floating 3s ease-in-out infinite;
+.feature-card .btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 8px 25px rgba(106, 79, 212, 0.9);
 }
-
 
 /* Active State */
 .feature-card.active {
@@ -1907,34 +1818,6 @@ button:hover {
   background: #f0f0ff;
   color: #6a5acd;
 }
-
-.feature-card.active .icon-avatar {
-  background: rgb(228, 2, 115);
-}
-
-/* --- New Rules to Prevent Text and Button Overflow --- */
-.feature-card,
-.feature-card h3,
-.feature-card p,
-.feature-card ul,
-.feature-card .btn {
-  box-sizing: border-box;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-}
-
-.feature-card h3 {
-  white-space: normal;
-}
-
-.feature-card .btn {
-  white-space: normal;
-  max-width: 100%;
-  display: inline-block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 
 
 
