@@ -55,6 +55,11 @@ nav {
   align-items: center;
   padding: 15px 30px;
   background-color: #E9CCFF;
+  width: 100%;
+  position: fixed; /* Ensures navbar stays at the top */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensures it stays above other elements */
 }
 
 /* Animation Effects for the Logo */
