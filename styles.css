@@ -2557,7 +2557,7 @@ blockquote {
   display: none; /* Initially hidden */
   transition: all 0.4s ease-in-out;
   box-shadow: 0 4px 15px rgba(108, 74, 203, 0.5);
-  z-index: 999;
+  z-index: 9999;
   animation: floating 3s ease-in-out infinite;
 }
 
