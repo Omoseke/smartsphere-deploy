@@ -3,6 +3,13 @@
 
 
 /* Global Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -49,11 +56,70 @@ nav {
   transition: all 0.6s ease; /* Smooth transition */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  nav {
-    padding: 10px 15px;
+  
+/* Add animation on hover (on body element) */
+@keyframes animatePulse {
+  0% {
+    transform: scale(1);
   }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply animation to elements when pointer activates */
+body:hover .container h1,
+body:hover .container button {
+  animation: animatePulse 1s ease-in-out infinite;
+}
+
+/* Content Layout */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Button Styles */
+button {
+  background-color: #42aaff; /* Soft blue background */
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ffd700; /* Gold on hover */
+}
+
+/*                                                  */
+
+/* Header */
+header {
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #E9CCFF;
+}
   
 /* Animation Effects for the Logo */
 .logo {
@@ -420,6 +486,12 @@ body:hover .container button {
   }
 }
 
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    padding: 10px 15px;
+  }
 
 
 
