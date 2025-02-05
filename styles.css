@@ -2462,12 +2462,18 @@ blockquote {
   padding: 5px;
   margin: 0;
   text-align: left; /* Ensures text is aligned left */
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background for the list */
+  border-radius: 8px; /* Rounded edges for a modern look */
+  padding: 10px; /* Adds spacing */
 }
 
 /* List Items */
 .footer ul li {
   margin: 5px 0;
   font-size: 19px;
+  background-color: rgba(255, 255, 255, 0.1); /* Light transparent background for each item */
+  padding: 5px;
+  border-radius: 5px;
 }
 
 /* List Links */
@@ -2475,12 +2481,12 @@ blockquote {
   text-decoration: none;
   font-weight: bold;
   display: inline-block;
-  
+
   /* Default Silver Text */
   background: linear-gradient(to right, rgb(12, 12, 12), silver);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  
+
   /* Smooth Transition */
   transition: background 0.3s ease-in-out, -webkit-text-fill-color 0.3s ease-in-out;
 }
@@ -2557,7 +2563,7 @@ blockquote {
   display: none; /* Initially hidden */
   transition: all 0.4s ease-in-out;
   box-shadow: 0 4px 15px rgba(108, 74, 203, 0.5);
-  z-index: 9999;
+  z-index: 12000;
   animation: floating 3s ease-in-out infinite;
 }
 
