@@ -12,18 +12,27 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, 'Poppins', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  overflow: hidden; /* Prevent both horizontal and vertical scroll */
-  color: #E9CCFF;
-  min-height: 100vh; /* Ensure full viewport height */
-  height: 100%; /* Full viewport height */
-  transition: background-color 0.6s ease, color 0.6s ease; /* Smooth transition */
-  background-color: #0f0f0f; /* Default dark background */
+  overflow: hidden;
+  min-height: 100vh;
+  height: 100%;
+  transition: background-color 0.6s ease, color 0.6s ease;
 }
 
-/* Pointer hover effect that triggers animation */
-body:hover {
-  background-color: #6a0dad; /* Change to purple background on hover */
-  color: #ffffff; /* Text color change when hovered */
+.main-content {
+  background-color: #0f0f0f; /* Apply dark background only to this container */
+  color: #E9CCFF; /* Apply text color only to this container */
+  width: 100%;
+  height: 100%;
+}
+
+body:hover .main-content {
+  background-color: #6a0dad; /* Change background color only for this container */
+  color: #ffffff;
+}
+
+button, a, .specific-element {
+  color: inherit !important; /* Prevents the global color from affecting them */
+  background: none !important; /* Removes inherited background */
 }
 
 /* General Container for Content */
