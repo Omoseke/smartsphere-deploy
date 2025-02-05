@@ -1,4 +1,4 @@
-/* Important notices... if the bug on back to top proves stubborn, erase all and code afresh... */
+(/* Important notices... if the bug on back to top proves stubborn, erase all and code afresh... */
 
 
 
@@ -2656,7 +2656,7 @@ blockquote {
   bottom: 20px;
   right: 20px;
   background: linear-gradient(135deg, rgba(108, 74, 203, 0.9), rgba(85, 51, 161, 0.95));
-  color: white;
+  color: #E9CCFF;
   border: none;
   padding: 14px 18px;
   font-size: 20px;
