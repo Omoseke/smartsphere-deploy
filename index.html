@@ -7,32 +7,30 @@
     
     <!-- Swiper File -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
+    
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> */
-
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     
-     <!-- W3Schools CSS (Normalize & Base Styling) -->
-     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- W3Schools CSS (Normalize & Base Styling) -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <!-- CSS File -->
     <link rel="stylesheet" href="styles.css">
 
 </head>
 <body>
+    <!-- The "Back to Top" button -->
+    <button class="back-to-top" id="backToTopBtn">↑</button>
 
-        <!-- The "Back to Top" button -->
-        <button class="back-to-top" onclick="scrollToTop()">↑</button>
+    <!-- This is the top anchor -->
+    <div id="top"></div>
 
-        <!-- This is the top anchor -->
-        <div id="top"></div>
-
-    <nav>
+    <!-- Main Navigation -->
+    <nav class="main-nav">
         <div class="logo">SmartSphere</div>
         <div class="hamburger-menu" id="hamburger">
             <span></span>
@@ -46,33 +44,44 @@
             <li><a href="#">About Us</a></li>
         </ul>
         <div class="auth-buttons">
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider"></div>
+                </label>
+            </div>
             <a href="#" class="login">Log In</a>
             <a href="#" class="signup">Sign Up</a>
         </div>
     </nav>
 
-    <nav>
-        <!-- Mobile Navigation (Hidden by Default) -->
-        <div class="mobile-nav" id="mobile-nav">
-            <a href="#">Home</a>
-            <a href="#">Service</a>
-            <a href="#">Blog</a>
-            <a href="#">About Us</a>
-            <div class="auth-buttons">
-                <a href="/login" class="login">Log In</a>
-                <a href="/signup" class="signup">Sign Up</a>
+    <!-- Mobile Navigation (Hidden by Default) -->
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="#"><i class="fas fa-home"></i><span>Home</span></a>
+        <a href="#"><i class="fas fa-cogs"></i><span>Services</span></a>
+        <a href="#"><i class="fas fa-blog"></i><span>Blog</span></a>
+        <a href="#"><i class="fas fa-users"></i><span>About Us</span></a>
+        <a href="#"><i class="fas fa-envelope"></i><span>Contact</span></a>
+        <div class="mobile-auth">
+            <a href="/login" class="login"><i class="fas fa-sign-in-alt"></i><span>Log In</span></a>
+            <a href="/signup" class="signup"><i class="fas fa-user-plus"></i><span>Sign Up</span></a>
+            <div class="theme-switch-wrapper mobile">
+                <label class="theme-switch" for="checkbox-mobile">
+                    <input type="checkbox" id="checkbox-mobile" />
+                    <div class="slider"></div>
+                </label>
+                <span class="toggle-label">Dark Mode</span>
             </div>
         </div>
-    </nav>
-</nav>
+    </div>
 
 <!-- Hero Section -->
 <section class="hero">
     <div class="container hero-content">
         <div class="hero-text"><br>
-            <h2>Your All-In-One <br> Inventory Solution</h2><br>
-            <p>Streamline your inventory operations, reduce costs, <br>and improve accuracy, and scale effortlessly with a <br>platform designed for modern businesses.</p>
-            <div class="buttons"><br>
+            <h2 class="centered-header">Your All-In-One <br> Inventory Solution</h2><br>
+            <p class="centered-text">Streamline your inventory operations, reduce costs, <br>and improve accuracy, and scale effortlessly with a <br>platform designed for modern businesses.</p>
+            <div class="buttons side-by-side"><br>
                 <a href="#" class="btn primary">ACCESS SMARTSPHERE →</a>
                 <a href="#" class="btn secondary">WATCH DEMO ▶️</a>
             </div>
@@ -88,11 +97,11 @@
       <div class="trusted-box">
           <h3>Trusted and Backed by</h3>
           <div class="logos">
-              <img src="./Assests/Airbnb.png" alt="Airbnb" class="brand-logo">
-              <img src="./Assests/Stripe.png" alt="Stripe" class="brand-logo">
-              <img src="./Assests/Shopify2.png" alt="Shopify" class="brand-logo">
-              <img src="./Assests/eBay.png" alt="eBay" class="brand-logo">
-              <img src="./Assests/Forbes.png" alt="Forbes" class="brand-logo">
+              <img src="./Assests/Airbnb.png" alt="Airbnb" class="brand-logo" data-tooltip="Airbnb uses SmartSphere for managing global property inventory">
+              <img src="./Assests/Stripe.png" alt="Stripe" class="brand-logo" data-tooltip="Stripe powers our secure payment processing system">
+              <img src="./Assests/Shopify2.png" alt="Shopify" class="brand-logo" data-tooltip="Shopify integrates with SmartSphere for unified inventory management">
+              <img src="./Assests/eBay.png" alt="eBay" class="brand-logo" data-tooltip="eBay marketplace sellers rely on our management tools">
+              <img src="./Assests/Forbes.png" alt="Forbes" class="brand-logo" data-tooltip="Featured in Forbes as top inventory solution for businesses">
           </div>
       </div>
   </section>
@@ -101,30 +110,28 @@
 <section class="services">
     <div class="container">
       <h2 class="section-title">Our Services</h2>
+      
+      <div class="service-box service-box-text-left">
+          <div class="service-text">
+            <h3>REAL TIME INVENTORY TRACKING</h3>
+            <p>Always know what you have and where it is with up-to-date insights.</p>
+          </div>          
+          <div class="service-image">
+            <img src="./Assests/SmartSphere4.png" alt="Inventory Tracking">
+          </div>
+      </div>
+      
+      <div class="service-box service-box-image-left">
+          <div class="service-image">
+            <img src="./Assests/SmartSphere5.png" alt="Inventory Tracking">
+          </div>
+          <div class="service-text">
+            <h3>SEAMLESS INTEGRATION</h3>
+            <p>Connect SmartSphere with your ERP, CRM, and e-commerce systems effortlessly.</p>
+          </div>
+      </div>
     </div>
-  </section>
-  
-        <div class="service-box service-box-text-left">
-            <div class="service-text">
-              <h3>REAL TIME INVENTORY TRACKING</h3>
-              <p>Always know what you have and where it is with up-to-date insights.</p>
-            </div>          
-            <div class="service-image">
-              <img src="./Assests/SmartSphere4.png" alt="Inventory Tracking">
-            </div>
-          </div>          
-        </div>
-  
-        <div class="service-box service-box-image-left">
-            <div class="service-image">
-              <img src="./Assests/SmartSphere5.png" alt="Inventory Tracking">
-            </div>
-            <div class="service-text">
-              <h3>SEAMLESS INTEGRATION</h3>
-              <p>Connect SmartSphere with your ERP, CRM, and e-commerce systems effortlessly.</p>
-            </div>
-          </div>          
-    </section>
+</section>
   
     <section class="scalable-solutions">
         <div class="container">
@@ -144,7 +151,18 @@
           <!-- Features Section -->
 <section class="feature-section container">
     <h2 class="feature-title">FEATURES SECTION</h2>
-    <div class="swiper mySwiper">
+    
+    <!-- Skeleton Loader for Features -->
+    <div class="content-loader feature-loader">
+        <div class="content-loader-row">
+            <div class="skeleton skeleton-card"></div>
+            <div class="skeleton skeleton-card"></div>
+            <div class="skeleton skeleton-card"></div>
+        </div>
+    </div>
+    
+    <!-- Real Content - Hidden Until Loaded -->
+    <div class="swiper mySwiper real-content">
         <div class="swiper-wrapper">
             
             <!-- Slide 1 -->
@@ -157,21 +175,21 @@
                         <li>Optimize stock levels with AI-powered forecasting.</li>
                         <li>Automate reordering to avoid stockouts and overstocking.</li>
                     </ul>
-                    <a href="#" class="btn">Learn More →</a>
+                    <a href="#" class="btn feature-btn">Learn More →</a>
                 </div>
             </div>
 
             <!-- Slide 2 (Highlighted) -->
             <div class="swiper-slide">
                 <div class="feature-card active">
-                    <img src="./AssestsVector.png" alt="Data & Insights Icon" class="icon-avatar">
+                    <img src="./Assests/Vector.png" alt="Data & Insights Icon" class="icon-avatar">
                     <h3>Centralized Data & Insights</h3>
                     <ul>
                         <li>Access a single source of truth for all inventory-related data.</li>
                         <li>Generate custom reports to analyze trends and improve decision-making.</li>
                         <li>Leverage real-time dashboards for actionable insights.</li>
                     </ul>
-                    <a href="#" class="btn">Learn More →</a>
+                    <a href="#" class="btn feature-btn">Learn More →</a>
                 </div>
             </div>
 
@@ -185,7 +203,7 @@
                         <li>Manage your entire supply chain from one platform.</li>
                         <li>Ensure data consistency across your entire organization.</li>
                     </ul>
-                    <a href="#" class="btn">Learn More →</a>
+                    <a href="#" class="btn feature-btn">Learn More →</a>
                 </div>
             </div>
 
@@ -199,16 +217,23 @@
                         <li>Ensure compliance with industry standards like ISO, GDPR, and more.</li>
                         <li>Role-based access controls for sensitive data.</li>
                     </ul>
-                    <a href="#" class="btn">Learn More →</a>
+                    <a href="#" class="btn feature-btn">Learn More →</a>
                 </div>
             </div>
         </div>
 
-        <!-- Swiper Pagination -->
-        <div class="swiper-pagination" aria-label="Feature navigation"></div>
-
         <!-- Swiper Navigation Buttons -->
         <div class="swiper-button-prev" aria-label="Previous feature"></div>
+        
+        <!-- Permanent Central Navigation Card - Small Pill Style (Positioned at the bottom) -->
+        <div class="permanent-central-card pill-style bottom-position">
+            <div class="central-card-inner">
+                <span class="current-slide">1</span>
+                <span class="slash">/</span>
+                <span class="total-slides">4</span>
+            </div>
+        </div>
+        
         <div class="swiper-button-next" aria-label="Next feature"></div>
     </div>
 </section>
@@ -219,7 +244,17 @@
         <h2>Read What Our Clients Have To Say</h2>
         <button class="see-all-btn">See All →</button>
         
-        <div class="testimonial-cards">
+        <!-- Skeleton Loader for Testimonials -->
+        <div class="content-loader testimonial-loader">
+            <div class="content-loader-row">
+                <div class="skeleton skeleton-card"></div>
+                <div class="skeleton skeleton-card"></div>
+                <div class="skeleton skeleton-card"></div>
+            </div>
+        </div>
+        
+        <!-- Real Content - Hidden Until Loaded -->
+        <div class="testimonial-cards real-content">
             <div class="card">
                 <blockquote>SmartSphere has transformed the way we manage our inventory. Our efficiency has improved by 40%.</blockquote>
                 <div class="client-info">
@@ -256,14 +291,29 @@
     </section>
 
     <div class="cta">
-        <div class="cta-content">
+        <!-- Skeleton Loader for CTA -->
+        <div class="content-loader cta-loader">
+            <div class="content-loader-row">
+                <div class="skeleton skeleton-image" style="width: 350px; height: 250px;"></div>
+                <div style="display: flex; flex-direction: column; gap: 15px; width: 100%; max-width: 500px;">
+                    <div class="skeleton skeleton-text large"></div>
+                    <div class="skeleton skeleton-text"></div>
+                    <div class="skeleton skeleton-text"></div>
+                    <div class="skeleton skeleton-button"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Real Content - Hidden Until Loaded -->
+        <div class="cta-content real-content">
           <div class="cta-image">
             <div class="lily-frame"></div>
-            <img src="./Assests/SmartSphere7.png" alt="Image" />
+            <div class="lily-frame-top"></div>
+            <img src="./Assests/SmartSphere7.png" alt="SmartSphere Dashboard" />
           </div>
           <div class="cta-text">
             <h2 class="smart-sphere">SmartSphere
-            <p>is your partner in simplifying inventory management and driving efficency. Don't wait to transform your business.</p>
+            <p>is your partner in simplifying inventory management and driving efficiency. Don't wait to transform your business.</p>
             <p class="free-trial">Free Trial Available</p></h2>
             <a href="#" class="pricing-btn">View Pricing →</a>
           </div>
