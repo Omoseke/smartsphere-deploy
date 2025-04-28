@@ -1253,27 +1253,8 @@ button:hover {
     margin-top: 0;
     margin-right: 0;
   }
-}
 
-/* iPhone 8 specific override for hero image position */
-@media screen and (min-width: 370px) and (max-width: 380px) and (min-height: 660px) and (max-height: 680px) {
-  .intro-image {
-    margin-top: -50px !important;
-    max-width: 90% !important;
-  }
-  
-  .hero-content {
-    gap: 10px !important;
-  }
-  
-  .hero-text {
-    margin-bottom: 15px !important;
-  }
-  
-  .trusted-container {
-    margin-top: -70px !important; /* Ensure trusted section overlaps hero on iPhone 8 */
-  }
-}
+
 
 /* Extra Small Mobile Devices */
 @media screen and (max-width: 480px) {
