@@ -1114,15 +1114,25 @@ button:hover {
 @media screen and (min-width: 370px) and (max-width: 380px) {
   .hero {
     padding: 30px 15px 90px; /* Extended bottom padding for iPhone 8 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure it takes full screen height */
+    text-align: center;
   }
   
   .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 20px; /* Reduce gap between elements */
   }
   
   .hero-text {
     padding: 10px;
     min-width: 250px;
+    text-align: center;
   }
   
   .hero-text h2 {
